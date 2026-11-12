@@ -1,0 +1,411 @@
+
+---PAGE 1---
+ 
+Last update date: Oct 16, 2027 
+ 
+MathWorks SAE Aero Design Simulation 
+Challenge 2027 
+Introduction 
+The MathWorks SAE Aero Design Simulation Challenge provides a platform for Aero Design teams 
+to virtually test and demonstrate flight-readiness through flight simulation in a virtual 
+environment. Teams download Virtual Environment for SAE Aero Design from File Exchange 
+The project contains the 
+• simulation model and supporting files required to configure the aircraft, 
+• connect an RC controller,  
+• virtual environment to fly missions,  
+• record flight data and  
+• prepare the submission.  
+Teams customize the model parameters to represent their competition aircraft and may also 
+modify the Aircraft Dynamics subsystem to represent the dynamics of their aircraft. This challenge 
+recognizes teams that demonstrate innovative and effective use of MATLAB or Simulink to design 
+their aircraft, develop a digital twin, and perform simulated flight missions in Simulink. 
+ 
+Figure 1: Virtual Environment for SAE Aero Design Competition 
+ 
+
+---PAGE 2---
+ 
+Last update date: Oct 16, 2027 
+ 
+Award Prizes and Recognition 
+The top three teams in the MathWorks SAE Aero Design Simulation Challenge will receive the 
+following awards 
+• First place: $500 
+• Second place: $300 
+• Third place: $200 
+Winners will be announced at the SAE Aero Design awards ceremony and will receive certificates 
+of achievement. They will also be invited to write a blog for the Student Lounge Blog  and 
+collaborate on a social media post with the @matlab_students Instagram channel. 
+Winners will be ranked in a single pool across the Regular, Micro, and Advanced classes; there will 
+be no separate awards for each class. Judge's decision is final and binding. 
+Challenge Criteria and Eligibility 
+The challenge is open to teams participating in the SAE Aero Design 2027 competition in the 
+Regular, Micro, and Advanced classes. Each team can make only one submission. 
+Teams will be assessed on two components: 
+• Flight missions in the virtual environment 
+o Teams must download the Virtual Environment for SAE Aero Design from MATLAB 
+File Exchange.  
+▪ Teams must not modify the Environment subsystem, Calibrated Fixed-
+Wing input subsystem, and related any supportive functions (Refer figure-
+1). 
+▪ Teams must change aircraft parameters with their aircraft data, may modify 
+the internal  architecture of the Aircraft Dynamics subsystem and 
+Visualization, while retaining the interface (Refer figure-1). 
+o  Teams will fly one mission in each of the following environments: 
+▪ Sea Level Standard 
+▪ Either competition site as appropriate:  
+• Aero Design East - Lakeland, FL  
+• Aero Design West - Van Nuys, CA 
+o Teams must submit the best recorded flight from each environment along with the 
+complete MATLAB Project and an engineering report. 
+o Both scored missions must be flown manually by a team pilot using an RC 
+transmitter or joystick connected to the template. Autopilots and scripted control 
+inputs are not allowed for the scored missions. 
+---PAGE 3---
+ 
+Last update date: Oct 16, 2027 
+ 
+o The calibrated RC commands recorded before the actuator dynamics during each 
+selected mission must be included in the submission. Judges will r eplay these 
+commands through the submitted aircraft model to verify the results. 
+o The MATLAB project must run in latest MATLAB release (R2026b). 
+o The model generates a flight data file after every simulation. Only the best scored 
+simulation needs to be submitted. 
+ 
+• Mission Definition 
+o Each selected simulation runs for 240 seconds (4 minutes). The aircraft flies 
+one lap in six steps, numbered as in the figure below. The origin is the aircraft’s 
+start point on the runway. 
+Table 1: Class wise limits for each segment 
+Class Take-off limit First-turn distance Landing limit 
+Regular Under 100 ft (30.48 
+m) 400 ft (121.92 m) Under 400 ft 
+(121.92 m) 
+Micro Under 50 ft (15.24 
+m) 350 ft (106.68 m) Under 200 ft 
+(60.96 m) 
+Advanced No upper limit 400 ft (121.92 m) No upper limit 
+ 
+---PAGE 4---
+ 
+Last update date: Oct 16, 2027 
+ 
+Figure 2: Mission profile 
+ 
+▪ Takeoff and climb (5 points) 
+• Start from rest, leave the ground, and stay at or above 1.64 ft (0.5 
+m) above ground level (AGL) for at least 0.5 s. 
+• Complete the takeoff within your class takeoff limit. 
+• Climb to the cruise altitude of 98.4 ft (30 m) and continue in the 
+takeoff direction. 
+• A takeoff within the class limit earns 5 points. A takeoff beyond 
+the limit, or a flight with no detected takeoff, earns 0 takeoff 
+points. 
+▪ First turn (5 points) 
+• Do not start the first turn before reaching your class first -turn 
+distance from the origin. 
+• Turn 180 degrees. Clockwise and counterclockwise circuits are 
+both accepted. 
+• Completing the first 180-degree turn earns 5 points. 
+▪ Cruise 
+• Fly the opposite-direction leg back past the origin. 
+• Continue until you are at least the first -turn distance from the 
+origin on the other side. 
+▪ Second turn (5 points) 
+• Turn 180 degrees in the same direction as the first turn. 
+• Start this turn at least the first-turn distance from the origin, on 
+the opposite side from the first turn. 
+• Completing the second 180-degree turn earns 5 points, but only 
+if the first turn was valid. 
+
+---PAGE 5---
+ 
+Last update date: Oct 16, 2027 
+ 
+▪ Final approach (5 points) 
+• Return on the runway heading to the departure sector. This 
+closes a true 360-degree circuit. 
+• Descend for landing. 
+• Returning to the departure sector earns 5 points, but only if both 
+turns were valid. 
+▪ Land, roll out and stop (5 points) 
+• After touchdown, stay below 1.64 ft (0.5 m) AGL and stop on the 
+runway. 
+• A stop is detected when horizontal ground speed stays below 
+1.64 ft/s (0.5 m/s) for at least 1 s. 
+• Complete the landing within your class landing limit. 
+• A completed landing within the class limit earns 5 points. An 
+incomplete landing, or a stop beyond the limit, earns 0 landing 
+points. 
+▪ Circuit rules (steps 2 to 5) 
+• From the end of the initial climb until the final descent, stay 
+between 82.0 ft and 114.8 ft (30 ± 5 m) AGL. If the aircraft leaves 
+this band, the circuit is not counted. 
+• Only the first 360 -degree circuit attempted within the 240 s 
+mission time is scored. Additional circuits earn no points. 
+• Circuit points are awarded in order. A step scores only when the 
+earlier circuit steps are valid. 
+• An early first turn, a straight out-and-back path, skipped sectors 
+or an incomplete step earn no points for that step. 
+o Mission score 
+▪ Each mission is worth 25 points:  
+• 5 for takeoff (step 1) 
+• up to 15 for the circuit (steps 2, 4 and 5, at 5 points each) 
+• 5 for landing (step 6) 
+▪ The Sea Level Standard mission and the applicable East or West 
+competition-site mission have equal weight. 
+▪ The flying mission score is the sum of both mission scores, with a 
+maximum of 50 points. No environment multiplier is applied. 
+𝑀𝑖𝑠𝑠𝑖𝑜𝑛 𝑆𝑐𝑜𝑟𝑒 (𝑀𝑆) (25) =  (𝑇𝑎𝑘𝑒 𝑜𝑓𝑓(5) + 𝐶𝑖𝑟𝑐𝑢𝑖𝑡 (15) + 𝐿𝑎𝑛𝑑𝑖𝑛𝑔(5)) 
+𝑇𝑜𝑡𝑎𝑙 𝑀𝑖𝑠𝑠𝑖𝑜𝑛 𝑆𝑐𝑜𝑟𝑒 (𝑇𝑀𝑆) = 𝑀𝑆𝑆𝑒𝑎 𝐿𝑒𝑣𝑒𝑙 + 𝑀𝑆𝐶𝑜𝑚𝑝𝑒𝑡𝑖𝑡𝑖𝑜𝑛 𝑠𝑖𝑡𝑒 
+• Engineering report: 
+o Teams will also be assessed through their Engineering Report and submitted 
+simulation model, including how effectively the model represents the aircraft and 
+---PAGE 6---
+ 
+Last update date: Oct 16, 2027 
+ 
+how well the Aircraft Dynamics subsystem is supported by data, assumptions, and 
+verification. 
+▪ Each team must submit an Engineering Report  that explains how the 
+MathWorks SAE Aero Design Virtual Environment, MATLAB, and Simulink 
+were used to address specific project challenges. The report must meet the 
+following specifications: 
+• Font size: 12 pt proportional font 
+• Line spacing: double 
+• Layout: Two columns 
+• Page size: ANSI A (8.5 × 11 in) 
+• Margins: Left: 1.0 in (25.4 mm); Right: 0.5 in (12.7 mm); Top: 0.5 in 
+(12.7 mm); Bottom: 0.5 in (12.7 mm) 
+• Page limit: 4 pages, including figures,  and tables. Content beyond 
+page 4 will not be judged. 
+▪ Header at the top of page 1 must show: Team name, School/University, 
+Class (Regular/Micro/Advanced) and Competition (East/West). 
+▪ File format: PDF, named Competition_Class_TeamNumber_TeamName.pdf 
+(for example, East_Micro_101_TeamAlpha.pdf). 
+▪ Suggested report structure: Teams may address the following points: 
+• Problem and approach: the design problem and why the virtual 
+environment/MATLAB/Simulink was used. 
+• Aircraft model and simulation setup: what was modeled and what 
+was added to the template. 
+• Analysis and design insights: plots, trade studies or optimization 
+results, and the design decisions they led to. 
+• Test and verification: how the model was checked, including 
+comparison with ground or flight test data where available. 
+• Reflection: what worked well, what was difficult, and which 
+MATLAB/Simulink features were useful or missing. 
+▪ A panel of MathWorks judges will evaluate the Engineering Report and 
+submitted model using the scoring rubric below. 
+Important Dates 
+• Aero Design East submission deadline: January 24, 2027, at 11:59 p.m. Pacific Time 
+• Aero Design West submission deadline: February 21, 2027, at 11:59 p.m. Pacific Time 
+Submission Process: 
+1. Prepare the submission as a ZIP package by following the instructions in the Prepare 
+your submission section. The package must contain: 
+---PAGE 7---
+ 
+Last update date: Oct 16, 2027 
+ 
+o The Engineering Report in PDF format, prepared according to the specifications 
+above. 
+o The complete Virtual Environment project, including the required setup files and 
+both selected flight-data files. 
+2. Upload the ZIP package to a team-managed cloud platform such as OneDrive, Google 
+Drive, or Dropbox. 
+o Set sharing to “Anyone with the link can view and download.” 
+o The link must not require a sign-in, password, or access request and must remain 
+active until the results are announced. 
+o Submissions that judges cannot download, open, or replay will not be scored. All 
+submission files will be downloaded within one hour after the deadline. 
+3. Submit the final ZIP-package link through the form for the applicable competition: 
+o Aero Design East Submission Form: submit by 11:59 p.m. Pacific Time on January 
+24, 2027. 
+o Aero Design West Submission Form: submit by 11:59 p.m. Pacific Time on 
+February 21, 2027. 
+4. Each team may make only one submission. Teams must submit the final cloud link 
+through the applicable form above. The ZIP package and cloud link must not be changed 
+after the submission deadline. 
+ 
+Available resources: 
+• Access the template repository: Virtual Environment for SAE Aero Design 
+• How to use the repository and submit your solutions: Launch webinar 
+• Get your MATLAB license here 
+• Learning resources: 
+o Pilot-in-the-loop Flight Simulation for Aerospace Design Competitions 
+o Aerospace Design Learning Resources for Students 
+o UAV Learning Resources for Students 
+o Aero Design-specific resources 
+ 
+---PAGE 8---
+ 
+Last update date: Oct 16, 2027 
+ 
+Scoring Rubric 
+ 
+School Name MathWorks SAE Aero Design Simulation Challenge 
+Section Description Max Points 
+Scor
+e Comments 
+Flying mission in virtual environment (50 points) 
+Flying mission 
+in the virtual 
+environment 
+Did the team: 
+• Fly one complete 240-second (4-
+minute) mission in each required 
+environment: Sea Level Standard 
+and the applicable East or West 
+competition-site environment?  
+• For each mission, did the team 
+complete a valid takeoff, the 
+scored 360-degree circuit stages 
+and a valid runway landing?  
+• Did both recordings include the 
+required calibrated pre-actuator 
+RC commands and support 
+evaluator replay?  
+ 
+50   
+Engineering report and simulation model assessment (50 points) 
+Problem 
+Framing & 
+Tool 
+Justification 
+Did the team: 
+• Clearly state the technical design 
+problem they are trying to solve? 
+• Explain why the virtual 
+environment/MATLAB/Simulink 
+was the right tool for this 
+problem? 
+5  
+ 
+Aircraft model 
+and 
+simulation 
+depth 
+Did the team: 
+• Customize the supplied model 
+with aircraft -specific geometry, 
+mass properties, aerodynamics, 
+propulsion and actuator data?  
+• Where the Aircraft Dynamics 
+architecture was changed, were 
+the changes relevant and 
+technically justified?  
+• Does architecture align with the 
+competition class? 
+• A well -parameterized use of the 
+supplied architecture may score 
+15 
+  
+---PAGE 9---
+ 
+Last update date: Oct 16, 2027 
+ 
+well; added blocks alone do not 
+earn points. 
+Analysis and 
+design 
+insights 
+Did the team: 
+• use MATLAB/Simulink to extract 
+design or performance insights 
+through plots, metrics, trade 
+studies or optimization?  
+• use insights to support aircraft -
+design or flight -readiness 
+decisions? 
+10 
+  
+Test and 
+verification 
+Did the team: 
+• check the model and flight 
+dynamics against appropriate 
+evidence such as hand 
+calculations, supplier data, bench 
+tests, wind tunnel, ground tests or 
+flight-test data? Were 
+assumptions, acceptance criteria 
+and differences explained? 
+10 
+  
+Data 
+traceability 
+and model 
+limitations 
+Did the team: 
+• identify important data sources, 
+units, coordinate conventions and 
+assumptions?  
+• explain the operating range, 
+known limitations and areas 
+where the model should not be 
+extrapolated? 
+5 
+    
+Report quality 
+and 
+reproducibilit
+y 
+Is the report  
+• clear, well organized and 
+supported by readable labelled 
+figures?  
+• does it follow the required format 
+and identify the important model 
+files or block paths so judges can 
+reproduce the work? 
+5   
+Total 100   
+ 
+ 
+---PAGE 10---
+ 
+Last update date: Oct 16, 2027 
+ 
+Prepare your submission 
+ 
+1. Add the required files to the appropriate folders in the Virtual Environment project: 
+a. Add both selected simulated flight-data files to Submission/Flight Data. 
+b. Add the Engineering Report PDF to Submission/Engineering Report. 
+2. From the project shortcuts, select Prepare your submission. The MATLAB app will open 
+and guide you through packaging the simulation files, flight data, and Engineering Report 
+required for submission. 
+ 
+Figure 3: Access automated submission preparation process 
+a. Enter the requested team information, review it for accuracy, and select 
+Next. 
+ 
+Figure 4: MATLAB App to prepare submission challenge 
+
+---PAGE 11---
+ 
+Last update date: Oct 16, 2027 
+ 
+b. Select the file used to define the aircraft data for the simulation, and then 
+select Next. 
+ 
+Figure 5: Select the file for aircraft data setup 
+c. Select both required flight data files and the Engineering Report PDF. Confirm 
+that the files correspond to the team and competition entered in the 
+previous steps. 
+ 
+Figure 6: Select your flight data and engineering report 
+d. Select Save Draft to retain the entered information, then review the summary 
+and selected files before exporting the submission package. 
+
+---PAGE 12---
+ 
+Last update date: Oct 16, 2027 
+ 
+ 
+ 
+Figure 7: Save and export the zip package 
+e. Select Export. After a successful export, the ZIP package will be available in the 
+Submission/Package folder. Upload this ZIP package to a team-managed cloud 
+platform and submit a publicly downloadable l ink through the applicable 
+competition form. 
+ 
+Figure 8: Final zip package ready for submission 
