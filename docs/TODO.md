@@ -16,6 +16,8 @@ useful.
 
 ## Aircraft data
 
+- [ ] Request and collect the mechanical-team inputs listed in
+      [Mechanical team data request](MECHANICAL_DATA_REQUEST.md).
 - [ ] Create the team aircraft-data package and select the active setup
       workflow.
 - [ ] Add geometry, reference dimensions, coordinate axes, and datum.

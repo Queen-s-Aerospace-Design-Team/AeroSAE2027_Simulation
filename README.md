@@ -9,6 +9,8 @@ digital model of the team's aircraft.
 
 - [Setup guide](docs/SETUP.md) - software requirements, project setup, and
   the recommended workflow for preparing and running the simulation.
+- [Mechanical team data request](docs/MECHANICAL_DATA_REQUEST.md) - the
+  aircraft information needed to build and configure the simulation model.
 - [Challenge rules summary](docs/RULES.md) - the key mission, model, scoring,
   and submission concepts summarized from the official rules PDF.
 - [TODO](docs/TODO.md) - work that still needs to be completed.
